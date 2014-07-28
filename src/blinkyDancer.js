@@ -5,6 +5,7 @@ var BlinkyDancer = function(top, left, timeBetweenSteps){
   // so we must keep a copy of the old version of this function
 
   //this.oldStep = Dancer.prototype.step;
+  this.step();
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
