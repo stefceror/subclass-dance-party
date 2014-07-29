@@ -9,11 +9,7 @@ PizzaDancer.prototype = Object.create(ImgDancer.prototype);
 PizzaDancer.prototype.constructor = PizzaDancer;
 PizzaDancer.prototype.step = function(){
   this.oldStep();
-  this.$node.toggle();
-
-  // if(this.$node.css('background-image') === 'none'){
-  //   this.$node.css('background-image', 'url('+this._imgUrl+')');
-  // }else{
-  //   this.$node.css('background-image', 'none');
-  // }
+  if(!this.$node.hasClass('congaLine')){
+    this.$node.toggle();
+  }
 };
