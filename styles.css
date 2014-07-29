@@ -34,12 +34,30 @@ body, a:link, a:visited, a:active{
   width: 100px;
   height: 100px;
   background-size: contain;
-}
-/*.orbit{
-  animation: orbit 5s infinite linear;
+  position: absolute;
 }
 
-@keyframes orbit {
+.back1{
+  background: url(src/dancefloor1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.back2{
+  background: url(src/dancefloor2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.orbitRight{
+  -webkit-animation: orbitRight 3s infinite;
+}
+
+.orbitLeft{
+  -webkit-animation: orbitLeft 3s infinite;
+}
+
+@-webkit-keyframes orbitRight {
   from {
     transform: rotate(0deg)
                translate(-150px)
@@ -50,4 +68,17 @@ body, a:link, a:visited, a:active{
                translate(-150px)
                rotate(-360deg);
   }
-}*/
+}
+
+@-webkit-keyframes orbitLeft {
+  from {
+    transform: rotate(0deg)
+               translate(150px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg)
+               translate(150px)
+               rotate(360deg);
+  }
+}
