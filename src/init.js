@@ -4,7 +4,7 @@ $(document).ready(function(){
     var lineUpDancers = function(){
       var dancers = window.dancers;
       for(var i = 0; i < dancers.length; i++){
-        dancers[i].lineUp();
+        setTimeout(dancers[i].lineUp.bind(dancers[i]), 100*i);
       }
     };
     lineUpDancers();

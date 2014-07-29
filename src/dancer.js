@@ -31,4 +31,9 @@ Dancer.prototype.setPosition = function(top, left){
 
 Dancer.prototype.lineUp = function(){
   this.$node.css('left', 0);
+  this.$node.addClass('congaLine');
+  var context = this;
+  setTimeout(function(){
+    context.$node.removeClass('congaLine');
+  },18000);
 };
