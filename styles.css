@@ -25,3 +25,29 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.lineUp{
+  padding:5px 12px;
+  float:left;
+}
+.imgDancer{
+  border: none;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+}
+/*.orbit{
+  animation: orbit 5s infinite linear;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg)
+               translate(-150px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translate(-150px)
+               rotate(-360deg);
+  }
+}*/
