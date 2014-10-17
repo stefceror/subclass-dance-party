@@ -1,5 +1,14 @@
 $(document).ready(function(){
   window.dancers = [];
+  $(".lineUp").on("click", function(event){
+    var lineUpDancers = function(){
+      var dancers = window.dancers;
+      for(var i = 0; i < dancers.length; i++){
+        setTimeout(dancers[i].lineUp.bind(dancers[i]), 100*i);
+      }
+    };
+    lineUpDancers();
+  });
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -22,12 +31,13 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 });
 

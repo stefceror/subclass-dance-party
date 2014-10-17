@@ -25,3 +25,89 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.lineUp{
+  padding:5px 12px;
+  float:left;
+}
+.imgDancer{
+  border: none;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  position: absolute;
+}
+
+.back1{
+  background: url(src/dancefloor1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.back2{
+  background: url(src/dancefloor2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.orbitRight{
+  -webkit-animation: orbitRight 3s infinite;
+}
+
+.orbitLeft{
+  -webkit-animation: orbitLeft 3s infinite;
+}
+
+.congaLine{
+  -webkit-animation: conga 15s 3s;
+}
+
+@-webkit-keyframes orbitRight {
+  from {
+    transform: rotate(0deg)
+               translate(-150px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translate(-150px)
+               rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes orbitLeft {
+  from {
+    transform: rotate(0deg)
+               translate(150px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg)
+               translate(150px)
+               rotate(360deg);
+  }
+}
+
+@-webkit-keyframes conga {
+  0% {
+    left: 0;
+  }
+  20% {
+    left:0;
+    top: 90%;
+  }
+  40% {
+    left: 50%;
+    top: 90%;
+  }
+  60% {
+    left:50%;
+    top: 10%;
+  }
+  80% {
+    left: 90%;
+    top: 10%;
+  }
+  100% {
+    top: 90%;
+  }
+}
